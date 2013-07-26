@@ -6,6 +6,7 @@
 	base=window.openDatabase("basesqlite.sqlite","3.7.17","basesqlite",50000);
 	base.transaction(funciona,falla,continua);
 	function funciona(o){
+		alert("Llegamos al SQL.");
 		o.executeSql("select * from personas",[],resultados,falla);
 	}
 	function resultados(o,cnt){
