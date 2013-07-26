@@ -20,10 +20,9 @@
 		}
 		alert(" "+cadena+" ");
 	}
-	function falla(){
-		var fallo;
-		fallo=SQLError.message;
-		alert("Fallo: "+fallo);
+	function falla(o){
+		//fallo=SQLError.message;
+		alert("Fallo: "+o.message);
 	}
 	function continua(){
 		alert("FIN");
