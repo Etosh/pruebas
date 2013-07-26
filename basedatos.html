@@ -3,7 +3,7 @@
 <head><title>titulo</title>
 <script>
 	var base;
-	base=window.openDatabase("basesqlite","3.7.17","basesqlite",50000);
+	base=window.openDatabase("basesqlite.sqlite","3.7.17","basesqlite",50000);
 	base.transaction(funciona,falla,continua);
 	function funciona(o){
 		o.executeSql("select * from personas",[],resultados,falla);
@@ -21,7 +21,7 @@
 		alert("Fallo");
 	}
 	function continua(){
-		alert("Continua");
+		alert("FIN");
 	}
 </script>
 </head>
