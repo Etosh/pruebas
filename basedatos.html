@@ -8,7 +8,7 @@
 <script>
 	function sifunciona(o){
 		alert("Llegamos al SQL.");
-		o.executeSql('SELECT * FROM PERSONAS ',[],resultados,falla);
+		o.executeSql('select * from personas',[],resultados,falla);
 	}
 	function resultados(o,cnt){
 		alert("Llegamos a los resultados.");
@@ -21,7 +21,9 @@
 		alert(" "+cadena+" ");
 	}
 	function falla(){
-		alert("Fallo");
+		var fallo;
+		fallo=SQLError.message;
+		alert("Fallo: "+fallo);
 	}
 	function continua(){
 		alert("FIN");
