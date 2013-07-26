@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+<head><title>titulo</title>
+<script>
+	var base;
+	base=window.openDatabase("basesqlite","3.7.17","basesqlite",50000);
+	base.transaction(funciona,falla,continua);
+	function funciona(o){
+		o.executeSql("select * from personas",[],resultados,falla);
+	}
+	function resultados(o,cnt){
+		var filas=0; var i=0; var cadena="";
+		filas=cnt.rows.length;
+		for(i=0;i<filas;i++){
+			cadena=cadena+cnt.rows.item(i).id;
+			cadena=cadena+cnt.rows.item(i).nombre;
+		}
+		alert(cadena);
+	}
+	function falla(){
+		alert("Fallo");
+	}
+	function continua(){
+		alert("Continua");
+	}
+</script>
+</head>
+<body>
+<div id="lista" name="lista"></div>
+</body>
+</html>
