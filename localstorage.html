@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html>
+<head><title>Localstorage</title>
+<script type="text/javascript" charset="utf-8" src="phonegap-2.9.0.js"></script>
+<script>
+
+function crearLocalStorage(){
+                
+	window.localStorage.setItem("local", "variable localstorage activa");
+    mostrarVariables();
+}
+
+function mostrarVariables(){
+	var texto = "";
+
+	if(window.localStorage.getItem("local")){
+		texto += "<b>"+ window.localStorage.getItem("local") + "</b>";
+	}else{
+		alert("NO JALO");
+	}
+	
+	lista = document.getElementById("listaVariables");
+    lista.innerHTML = texto;
+}
+				
+</script>
+</head>
+<body>
+
+
+        <button onclick="crearLocalStorage()">Crear variable localStorage</button>
+		<button onclick="mostrarVariables()">Mostrar</button>
+        
+        <a href ="localstorage2.html"> Abrir otro Documento </a>
+        
+        
+        <h1>Variables</h1>
+        <div id="listaVariables">
+            
+        </div>
+
+
+</body>
+</html>
