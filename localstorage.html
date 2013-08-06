@@ -22,7 +22,14 @@ function mostrarVariables(){
 	lista = document.getElementById("listaVariables");
     lista.innerHTML = texto;
 }
-//*/	
+//*/
+function cargarnotas(){
+	if(var notas = window.localStorage.getItem("notas")){
+		var cuadro = document.getElementById("cuadro");
+		var texto = '<textarea id="caja" name="caja" style="width:100%;height:50%;">'+notas+'</textarea>';
+		cuadro.innerHTML = texto;
+	}
+}	
 function guardar(){
 	
 	if(var notas = window.localStorage.getItem("notas")){
@@ -46,7 +53,7 @@ function guardar(){
 	
 </script>
 </head>
-<body>
+<body onload="cargarnotas();">
 
 
         <!-- button onclick="crearLocalStorage()">Crear variable localStorage</button -->
