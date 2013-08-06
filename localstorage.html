@@ -24,7 +24,9 @@ function mostrarVariables(){
 }
 //*/
 function cargarnotas(){
-	
+	if(variable){
+		alert(variable);
+	}
 	if(window.localStorage.getItem("notas")){
 		var notas = window.localStorage.getItem("notas");
 		var cuadro = document.getElementById("cuadro");
