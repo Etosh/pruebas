@@ -24,30 +24,32 @@ function mostrarVariables(){
 }
 //*/
 function cargarnotas(){
-	if(var notas = window.localStorage.getItem("notas")){
+	
+	if(window.localStorage.getItem("notas")){
+		var notas = window.localStorage.getItem("notas");
 		var cuadro = document.getElementById("cuadro");
 		var texto = '<textarea id="caja" name="caja" style="width:100%;height:50%;">'+notas+'</textarea>';
 		cuadro.innerHTML = texto;
-		alert("Carga de variable inicial");
+		//alert("Carga de variable inicial");
 	}else{
-		alert("Fallo la carga de variables inicial");
+		//alert("Fallo la carga de variables inicial");
 	}
 }	
 function guardar(){
 	
-	if(var notas = window.localStorage.getItem("notas")){
-	
+	if(window.localStorage.getItem("notas")){
+		var notas = window.localStorage.getItem("notas")
 		var txtcaja = document.getElementById("caja");
 		var caja = txtcaja.value;
 	
-		alert("Guardado de datos existentes");
+		//alert("Guardado de datos existentes");
 	
 	}else{
 	
 		var txtcaja = document.getElementById("caja");
 		var caja = txtcaja.value;
 		
-		alert("Guardado de datos inexistentes");
+		//alert("Guardado de datos inexistentes");
 		
 	}
 	
