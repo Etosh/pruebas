@@ -27,7 +27,8 @@ function guardar(){
 	
 	if(var notas = window.localStorage.getItem("notas")){
 	
-		var caja = notas;
+		var txtcaja = document.getElementById("caja");
+		var caja = txtcaja.value;
 	
 	}else{
 	
