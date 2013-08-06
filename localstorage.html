@@ -28,6 +28,9 @@ function cargarnotas(){
 		var cuadro = document.getElementById("cuadro");
 		var texto = '<textarea id="caja" name="caja" style="width:100%;height:50%;">'+notas+'</textarea>';
 		cuadro.innerHTML = texto;
+		alert("Carga de variable inicial");
+	}else{
+		alert("Fallo la carga de variables inicial");
 	}
 }	
 function guardar(){
@@ -37,10 +40,14 @@ function guardar(){
 		var txtcaja = document.getElementById("caja");
 		var caja = txtcaja.value;
 	
+		alert("Guardado de datos existentes");
+	
 	}else{
 	
 		var txtcaja = document.getElementById("caja");
 		var caja = txtcaja.value;
+		
+		alert("Guardado de datos inexistentes");
 		
 	}
 	
